@@ -1,0 +1,19 @@
+type Query {
+	overview(application:String, date:Int): Result
+}
+
+type Result {
+	answered: String
+	book(version: String): Book
+	author: Author
+}
+
+type Book {
+	id: Int
+	name: String
+	version: String
+}
+
+type Author {
+	name: String
+}
